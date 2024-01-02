@@ -36,8 +36,8 @@ class Rawg{
   /// Get a list of [Achievement]
   /// params: page
   /// return an empty list if the page does not exist
-  static Future<List<Achievement>> getAchievements({required int id, int page = 1}) async {
-    return RawgUtils.achievement(page);
+  static Future<List<Achievement>> getAchievements({required int id}) async {
+    return RawgUtils.achievement(id);
   }
 
   /// Get a list of [Platform]

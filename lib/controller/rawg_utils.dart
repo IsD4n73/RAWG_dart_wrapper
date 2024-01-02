@@ -1,3 +1,5 @@
+import 'package:RAWG_dart_wrapper/controller/achievement_controller.dart';
+import 'package:RAWG_dart_wrapper/controller/game_controller.dart';
 import 'package:RAWG_dart_wrapper/controller/genre_controller.dart';
 import 'package:RAWG_dart_wrapper/controller/platform_controller.dart';
 import 'package:RAWG_dart_wrapper/models/achievement.dart';
@@ -15,19 +17,19 @@ class RawgUtils {
 
   static Future<List<Game>> games(
       int page, Ordering? order, String? query) async {
-    return [];
+    return loadGame(page, order, query);
   }
 
   static Future<Game> detail(int id) async {
-    return Game.fromJson({});
+    return await loadDetail(id);
   }
 
   static Future<List<Genre>> genres() async {
     return await loadGenre();
   }
 
-  static Future<List<Achievement>> achievement(int page) async {
-    return [];
+  static Future<List<Achievement>> achievement(int id) async {
+    return await loadGameTrofy(id);
   }
 
   static Future<List<Platform>> platforms() async {

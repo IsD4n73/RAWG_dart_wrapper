@@ -56,6 +56,11 @@ class Game {
         "alternative_names": alternativeNames.map((x) => x).toList(),
     };
 
+
+  @override
+  String toString() {
+    return 'Game(id: $id, slug: $slug, name: $name, nameOriginal: $nameOriginal, description: $description, released: $released, tba: $tba, backgroundImage: $backgroundImage, website: $website, achievementsCount: $achievementsCount, alternativeNames: $alternativeNames)';
+  }
 }
 
               
