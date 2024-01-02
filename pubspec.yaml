@@ -9,6 +9,8 @@ environment:
 dependencies:
   dio: ^5.4.0
 
-dev_dependencies:
-
-flutter:
+topics:
+  - api
+  - wrapper
+  - games
+  - RAWG
