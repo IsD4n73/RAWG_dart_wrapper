@@ -1,0 +1,14 @@
+name: RAWG_dart_wrapper
+description: A Dart package to let users easily integrate RAWG API.
+version: 1.0.0
+homepage: https://github.com/IsD4n73/RAWG_dart_wrapper/
+
+environment:
+  sdk: '>=2.15.0 <4.0.0'
+
+dependencies:
+  dio: ^5.4.0
+
+dev_dependencies:
+
+flutter:
