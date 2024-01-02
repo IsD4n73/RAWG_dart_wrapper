@@ -1,6 +1,6 @@
 library RAWG_dart_wrapper;
 
-export 'controller/rawg.dart' show Rawg;
+export 'controller/rawg.dart';
 export 'models/game.dart';
 export 'models/achievement.dart';
 export 'models/errors.dart';
