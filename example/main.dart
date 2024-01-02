@@ -26,7 +26,7 @@ Future<dynamic> main() async {
   // get the achievement for game
   List<Achievement> achievement = await Rawg.getAchievements(id: games.first.id);
 
-  achievement = await Rawg.getAchievements(id: games.first.id, page: 2);
+  achievement = await Rawg.getAchievements(id: games.first.id);
 
   print(games);
   print(detail);
