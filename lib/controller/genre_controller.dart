@@ -6,7 +6,7 @@ import 'rawg_utils.dart';
 
 Future<List<Genre>> loadGenre() async {
   Response response = await RawgUtils.dio.get(
-    RawgUtils.baseUrl + '/genres',
+    '${RawgUtils.baseUrl}/genres',
     queryParameters: {
       "key": Rawg.key,
       "page_size": 100,

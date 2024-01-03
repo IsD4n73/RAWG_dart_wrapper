@@ -8,7 +8,7 @@ import 'rawg_utils.dart';
 
 Future<List<Achievement>> loadGameTrofy(int id) async {
   Response response = await RawgUtils.dio.get(
-    RawgUtils.baseUrl + '/games/$id/achievements',
+    '${RawgUtils.baseUrl}/games/$id/achievements',
     queryParameters: {
       "key": Rawg.key,
       "page_size": 100,

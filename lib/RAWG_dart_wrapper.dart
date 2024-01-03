@@ -1,4 +1,4 @@
-library RAWG_dart_wrapper;
+library;
 
 export 'controller/rawg.dart' show Rawg;
 export 'models/game.dart' show Game;

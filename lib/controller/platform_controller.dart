@@ -7,7 +7,7 @@ import 'rawg_utils.dart';
 
 Future<List<Platform>> loadPlatform() async {
   Response response = await RawgUtils.dio.get(
-    RawgUtils.baseUrl + '/platforms',
+    '${RawgUtils.baseUrl}/platforms',
     queryParameters: {
       "key": Rawg.key,
       "page_size": 100,

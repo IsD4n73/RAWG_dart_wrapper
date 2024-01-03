@@ -1,4 +1,5 @@
 # RAWG Wrapper
+[![Pub](https://img.shields.io/pub/v/rawg_dart_wrapper.svg)](https://pub.dev/packages/rawg_dart_wrapper)
 
 ### RAWG API Documentation
 
@@ -60,16 +61,8 @@ List<Platform> platforms = await Ragw.getPlatforms();
 
 
 ### TODO
-- [ ] Screenshot for game
-- [ ] Search games by platform
-- [ ] Search games by genre
-- [ ] Store wrapper
+- Screenshot for game
+- Search games by platform
+- Search games by genre
+- Store wrapper
 
-
-echo "# RAWG_dart_wrapper" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/IsD4n73/RAWG_dart_wrapper.git
-git push -u origin main

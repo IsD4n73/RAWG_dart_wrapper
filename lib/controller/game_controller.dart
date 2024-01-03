@@ -8,7 +8,7 @@ import 'utils.dart';
 
 Future<List<Game>> loadGame(int page, Ordering? ordering, String? query) async {
   Response response = await RawgUtils.dio.get(
-    RawgUtils.baseUrl + '/games',
+    '${RawgUtils.baseUrl}/games',
     queryParameters: {
       "key": Rawg.key,
       "page_size": 100,
@@ -48,7 +48,7 @@ Future<List<Game>> loadGame(int page, Ordering? ordering, String? query) async {
 
 Future<Game> loadDetail(int id) async {
   Response response = await RawgUtils.dio.get(
-    RawgUtils.baseUrl + '/games/$id',
+    '${RawgUtils.baseUrl}/games/$id',
     queryParameters: {
       "key": Rawg.key,
     },
