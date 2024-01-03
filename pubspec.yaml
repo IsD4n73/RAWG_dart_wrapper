@@ -1,7 +1,7 @@
 name: rawg_dart_wrapper
 description: A Dart package to let users easily integrate RAWG API.
 
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/IsD4n73/RAWG_dart_wrapper/
 
 
@@ -19,4 +19,4 @@ topics:
   - api
   - wrapper
   - games
-  - RAWG
+  - rawg
