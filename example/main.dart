@@ -9,7 +9,8 @@ Future<dynamic> main() async {
   // get all games
   List<Game> games = await Rawg.getGames(page: 1);
 
-  List<Game> games2 = await Rawg.getGames(order: Ordering.released); // custom order
+  List<Game> games2 =
+      await Rawg.getGames(order: Ordering.released); // custom order
 
   // search for games
   games2 = await Rawg.getGames(query: "Call of duty");
@@ -24,7 +25,8 @@ Future<dynamic> main() async {
   List<Platform> platforms = await Rawg.getPlatforms();
 
   // get the achievement for game
-  List<Achievement> achievement = await Rawg.getAchievements(id: games.first.id);
+  List<Achievement> achievement =
+      await Rawg.getAchievements(id: games.first.id);
 
   achievement = await Rawg.getAchievements(id: games.first.id);
 

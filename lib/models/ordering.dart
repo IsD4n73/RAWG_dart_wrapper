@@ -1,8 +1,1 @@
-enum Ordering {
-  name, 
-  released,
-  added,
-  created,
-  updated,
-  rating
-}
+enum Ordering { name, released, added, created, updated, rating }

@@ -1,5 +1,3 @@
-
-
 import '../models/achievement.dart';
 import '../models/game.dart';
 import '../models/genre.dart';
@@ -7,19 +5,20 @@ import '../models/ordering.dart';
 import '../models/platform.dart';
 import 'rawg_utils.dart';
 
-class Rawg{
+class Rawg {
   /// Api key for authentication
   static String? key;
-  
-  Rawg({required String apiKey}){
+
+  Rawg({required String apiKey}) {
     key = apiKey;
   }
 
-  /// Get a list of [Game] 
+  /// Get a list of [Game]
   /// params: page, ordering
   /// You can sort the results by the enum [Ordering]
   /// return an empty list if the page does not exist
-  static Future<List<Game>> getGames({int page = 1, Ordering? order, String? query}) async {
+  static Future<List<Game>> getGames(
+      {int page = 1, Ordering? order, String? query}) async {
     return RawgUtils.games(page, order, query);
   }
 
@@ -44,5 +43,4 @@ class Rawg{
   static Future<List<Platform>> getPlatforms() async {
     return RawgUtils.platforms();
   }
-  
 }
