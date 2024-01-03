@@ -1,6 +1,10 @@
-import 'package:RAWG_dart_wrapper/RAWG_dart_wrapper.dart';
-import 'package:RAWG_dart_wrapper/controller/rawg_utils.dart';
+
 import 'package:dio/dio.dart';
+
+import '../models/achievement.dart';
+import '../models/errors.dart';
+import 'rawg.dart';
+import 'rawg_utils.dart';
 
 Future<List<Achievement>> loadGameTrofy(int id) async {
   Response response = await RawgUtils.dio.get(

@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:RAWG_dart_wrapper/RAWG_dart_wrapper.dart';
+import 'package:rawg_dart_wrapper/rawg_dart_wrapper.dart';
 
 Future<dynamic> main() async {
   // Initialize

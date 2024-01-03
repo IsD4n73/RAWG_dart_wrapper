@@ -1,6 +1,8 @@
 
-import 'package:RAWG_dart_wrapper/RAWG_dart_wrapper.dart';
 import 'package:dio/dio.dart';
+import '../models/errors.dart';
+import '../models/platform.dart';
+import 'rawg.dart';
 import 'rawg_utils.dart';
 
 Future<List<Platform>> loadPlatform() async {

@@ -1,5 +1,7 @@
-import 'package:RAWG_dart_wrapper/RAWG_dart_wrapper.dart';
 import 'package:dio/dio.dart';
+import '../models/errors.dart';
+import '../models/genre.dart';
+import 'rawg.dart';
 import 'rawg_utils.dart';
 
 Future<List<Genre>> loadGenre() async {

@@ -8,6 +8,11 @@ RAGW API Docs Avalible <a href ="https://api.rawg.io/docs/">here.</a>
 https://api.rawg.io/docs/
 `````
 
+### Import
+```dart
+import 'package:rawg_dart_wrapper/rawg_dart_wrapper.dart';
+`````
+
 ### Usage
 1) Initialize 
 ```dart

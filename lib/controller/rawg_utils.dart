@@ -1,14 +1,15 @@
-import 'package:RAWG_dart_wrapper/controller/achievement_controller.dart';
-import 'package:RAWG_dart_wrapper/controller/game_controller.dart';
-import 'package:RAWG_dart_wrapper/controller/genre_controller.dart';
-import 'package:RAWG_dart_wrapper/controller/platform_controller.dart';
-import 'package:RAWG_dart_wrapper/models/achievement.dart';
-import 'package:RAWG_dart_wrapper/models/game.dart';
-import 'package:RAWG_dart_wrapper/models/genre.dart';
-import 'package:RAWG_dart_wrapper/models/platform.dart';
+
 import 'package:dio/dio.dart';
 
+import '../models/achievement.dart';
+import '../models/game.dart';
+import '../models/genre.dart';
 import '../models/ordering.dart';
+import '../models/platform.dart';
+import 'achievement_controller.dart';
+import 'game_controller.dart';
+import 'genre_controller.dart';
+import 'platform_controller.dart';
 
 class RawgUtils {
   static final dio = Dio();

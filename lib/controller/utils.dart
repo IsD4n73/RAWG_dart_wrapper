@@ -1,4 +1,4 @@
-import 'package:RAWG_dart_wrapper/models/ordering.dart';
+import '../models/ordering.dart';
 
 class Utils {
   static String orderingFormat(Ordering? order) {

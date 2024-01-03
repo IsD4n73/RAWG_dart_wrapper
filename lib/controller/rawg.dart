@@ -1,10 +1,10 @@
 
-import 'package:RAWG_dart_wrapper/models/achievement.dart';
-import 'package:RAWG_dart_wrapper/models/game.dart';
-import 'package:RAWG_dart_wrapper/models/genre.dart';
-import 'package:RAWG_dart_wrapper/models/platform.dart';
 
+import '../models/achievement.dart';
+import '../models/game.dart';
+import '../models/genre.dart';
 import '../models/ordering.dart';
+import '../models/platform.dart';
 import 'rawg_utils.dart';
 
 class Rawg{

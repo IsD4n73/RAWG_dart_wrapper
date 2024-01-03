@@ -1,7 +1,10 @@
-import 'package:RAWG_dart_wrapper/RAWG_dart_wrapper.dart';
-import 'package:RAWG_dart_wrapper/controller/utils.dart';
 import 'package:dio/dio.dart';
+import '../models/errors.dart';
+import '../models/game.dart';
+import '../models/ordering.dart';
+import 'rawg.dart';
 import 'rawg_utils.dart';
+import 'utils.dart';
 
 Future<List<Game>> loadGame(int page, Ordering? ordering, String? query) async {
   Response response = await RawgUtils.dio.get(
