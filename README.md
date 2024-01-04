@@ -64,7 +64,8 @@ List<Platform> platforms = await Ragw.getPlatforms();
 
 
 ### TODO
-- Search games by platform
-- Search games by genre
+- Publisher wrapper
 - Store wrapper
+- Get links to the stores that sell the game
+- Get a list of game trailers
 
