@@ -8,14 +8,18 @@ class Achievement {
     required this.percent,
   });
 
-  /// ID of Achievement 
+  /// ID of Achievement
   final int id;
+
   /// name of Achievement
   final String name;
+
   /// description of Achievement
   final String description;
+
   /// image of Achievement
   final String image;
+
   /// percent of Achievement
   final String percent;
 

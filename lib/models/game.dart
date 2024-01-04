@@ -16,24 +16,34 @@ class Game {
 
   /// ID of Game
   final int id;
-  /// slug ID of Game 
+
+  /// slug ID of Game
   final String slug;
+
   /// name of Game
   final String name;
+
   /// originale name of Game
   final String nameOriginal;
+
   /// description of Game (only with details call)
   final String description;
+
   /// released date of Game
   final String released;
+
   /// is TBA
   final bool tba;
+
   /// bg image of Game
   final String backgroundImage;
+
   /// website of Game (only with details call)
   final String website;
+
   /// achievements count of Game (only with details call)
   final int achievementsCount;
+
   /// alternative name of Game (only with details call)
   final List<String> alternativeNames;
 

@@ -26,7 +26,6 @@ class RawgUtils {
 
   /// check for game details error
   static Future<Game> detail(int id) async {
-    
     return await loadDetail(id);
   }
 

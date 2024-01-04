@@ -10,12 +10,16 @@ class Platform {
 
   /// ID of Platform
   final int id;
+
   /// name of Platform
   final String name;
+
   /// slug ID of Platform
   final String slug;
+
   /// number of [Game] for this platform
   final int gamesCount;
+
   /// image of Platform
   final String imageBackground;
 

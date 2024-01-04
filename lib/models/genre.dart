@@ -10,12 +10,16 @@ class Genre {
 
   /// ID of Genre
   final int id;
+
   /// name of Genre
   final String name;
+
   /// slug ID of Genre
   final String slug;
+
   /// nuber of [Game] with the Genre
   final int gamesCount;
+
   /// Image of Genre
   final String imageBackground;
 
