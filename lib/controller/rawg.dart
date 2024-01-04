@@ -15,12 +15,18 @@ class Rawg {
   }
 
   /// Get a list of [Game]
-  /// params: page, ordering
+  /// params: page, ordering, query
   /// You can sort the results by the enum [Ordering]
   /// return an empty list if the page does not exist
   static Future<List<Game>> getGames(
       {int page = 1, Ordering? order, String? query}) async {
     return RawgUtils.games(page, order, query);
+  }
+
+  /// Get a list of [String] (URI of image)
+  /// params: ID of the game
+  static Future<List<String>> getScreenshot({required int gameID}) async {
+    return RawgUtils.screen(gameID);
   }
 
   /// Get a [Game] by ID with more details (achievement count, alias names, original name, website)

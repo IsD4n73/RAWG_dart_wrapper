@@ -29,6 +29,11 @@ class RawgUtils {
     return await loadDetail(id);
   }
 
+  /// check for game screen error
+  static Future<List<String>> screen(int id) async {
+    return await loadScreenshot(id);
+  }
+
   /// check for genre error
   static Future<List<Genre>> genres() async {
     return await loadGenre();

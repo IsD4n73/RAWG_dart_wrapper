@@ -1,3 +1,7 @@
+### 1.1.0
+- added getScreenshot()
+- fix code format
+
 ### 1.0.2
 - fix code format
 - enhanced documentation

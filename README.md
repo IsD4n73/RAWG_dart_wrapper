@@ -35,6 +35,9 @@ List<Game> games = await Rawg.getGames(query: "Call of duty");
 
 // get details
 Game detail = await Rawg.getGameDetails(id: 5);
+
+// get the screenshot
+List<String> screen = await Rawg.getScreenshot(gameID: 5);
 ```
 
 - genres
@@ -61,7 +64,6 @@ List<Platform> platforms = await Ragw.getPlatforms();
 
 
 ### TODO
-- Screenshot for game
 - Search games by platform
 - Search games by genre
 - Store wrapper

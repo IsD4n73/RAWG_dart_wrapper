@@ -12,6 +12,9 @@ Future<dynamic> main() async {
   List<Game> games2 =
       await Rawg.getGames(order: Ordering.released); // custom order
 
+  // get the screenshot
+  List<String> screen = await Rawg.getScreenshot(gameID: games2.first.id);
+
   // search for games
   games2 = await Rawg.getGames(query: "Call of duty");
 
@@ -32,6 +35,7 @@ Future<dynamic> main() async {
 
   print(games);
   print(detail);
+  print(screen);
   print(platforms);
   print(genres);
   print(achievement);
