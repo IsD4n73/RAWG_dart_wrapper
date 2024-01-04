@@ -1,3 +1,5 @@
+import 'package:rawg_dart_wrapper/models/platform.dart';
+
 class Game {
   /// Constructor of Game
   Game({
@@ -12,6 +14,10 @@ class Game {
     required this.website,
     required this.achievementsCount,
     required this.alternativeNames,
+    required this.playtime,
+    required this.metacriticRating,
+    required this.rating,
+    required this.platforms,
   });
 
   /// ID of Game
@@ -44,8 +50,19 @@ class Game {
   /// achievements count of Game (only with details call)
   final int achievementsCount;
 
+  /// Play time in hours (only with details call)
+  final int playtime;
+
+  /// general rating of the game (only with details call)
+  final double rating;
+
+  /// metacritic rating of the game (only with details call)
+  final int metacriticRating;
+
   /// alternative name of Game (only with details call)
   final List<String> alternativeNames;
+
+  final List<Platform> platforms;
 
   /// get the model from the json
   factory Game.fromJson(Map<String, dynamic> json) {
@@ -53,36 +70,37 @@ class Game {
       id: json["id"] ?? 0,
       slug: json["slug"] ?? "",
       name: json["name"] ?? "",
+      rating: json["rating"] ?? 0,
+      metacriticRating: json["metacritic"] ?? 0,
       nameOriginal: json["name_original"] ?? "",
       description: json["description"] ?? "",
       released: json["released"] ?? "",
       tba: json["tba"] ?? false,
       backgroundImage: json["background_image"] ?? "",
       website: json["website"] ?? "",
+      playtime: json["playtime"] ?? 0,
       achievementsCount: json["achievements_count"] ?? 0,
       alternativeNames: json["alternative_names"] == null
           ? []
-          : List<String>.from(json["alternative_names"]!.map((x) => x)),
+          : List<String>.from(
+              json["alternative_names"]!.map(
+                (x) => x,
+              ),
+            ),
+      platforms: json["platforms"] == null
+          ? []
+          : List<Platform>.from(
+              json["platforms"]!.map(
+                (x) => Platform.fromJson(
+                  x["platform"],
+                ),
+              ),
+            ),
     );
   }
 
-  /// get the json from the model
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "slug": slug,
-        "name": name,
-        "name_original": nameOriginal,
-        "description": description,
-        "released": released,
-        "tba": tba,
-        "background_image": backgroundImage,
-        "website": website,
-        "achievements_count": achievementsCount,
-        "alternative_names": alternativeNames.map((x) => x).toList(),
-      };
-
   @override
   String toString() {
-    return 'Game(id: $id, slug: $slug, name: $name, nameOriginal: $nameOriginal, description: $description, released: $released, tba: $tba, backgroundImage: $backgroundImage, website: $website, achievementsCount: $achievementsCount, alternativeNames: $alternativeNames)';
+    return 'Game(id: $id, slug: $slug, name: $name, nameOriginal: $nameOriginal, description: $description, released: $released, tba: $tba, backgroundImage: $backgroundImage, website: $website, achievementsCount: $achievementsCount, playtime: $playtime, rating: $rating, metacriticRating: $metacriticRating, alternativeNames: $alternativeNames, platforms: $platforms)';
   }
 }

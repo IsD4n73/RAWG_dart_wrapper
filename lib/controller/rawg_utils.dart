@@ -19,9 +19,9 @@ class RawgUtils {
   static String baseUrl = "https://api.rawg.io/api";
 
   /// check for game error
-  static Future<List<Game>> games(
-      int page, Ordering? order, String? query) async {
-    return loadGame(page, order, query);
+  static Future<List<Game>> games(int page, Ordering? order, String? query,
+      String? platforms, String? genres) async {
+    return loadGame(page, order, query, platforms, genres);
   }
 
   /// check for game details error

@@ -6,6 +6,7 @@ class Platform {
     required this.slug,
     required this.gamesCount,
     required this.imageBackground,
+    required this.image,
   });
 
   /// ID of Platform
@@ -20,8 +21,11 @@ class Platform {
   /// number of [Game] for this platform
   final int gamesCount;
 
-  /// image of Platform
+  /// bg image of Platform
   final String imageBackground;
+
+  /// image of platform
+  final String image;
 
   /// get the model from the json
   factory Platform.fromJson(Map<String, dynamic> json) {
@@ -29,19 +33,11 @@ class Platform {
       id: json["id"] ?? 0,
       name: json["name"] ?? "",
       slug: json["slug"] ?? "",
+      image: json["image"] ?? "",
       gamesCount: json["games_count"] ?? 0,
       imageBackground: json["image_background"] ?? "",
     );
   }
-
-  /// get the json from the model
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "slug": slug,
-        "games_count": gamesCount,
-        "image_background": imageBackground,
-      };
 
   @override
   String toString() {

@@ -1,5 +1,8 @@
 ### 1.1.0
 - added getScreenshot()
+- added platforms and genre in getGames()
+- added playtime, metacriticRating, platforms rating in Game
+- added image in Platform
 - fix code format
 
 ### 1.0.2

@@ -15,12 +15,17 @@ class Rawg {
   }
 
   /// Get a list of [Game]
-  /// params: page, ordering, query
+  /// params: page, ordering, query, platforms, genres
   /// You can sort the results by the enum [Ordering]
+  /// For the platforms and genres you can use the ID or SLUG separated by ',' for the search [Rawg.getGames(platforms: "1,2,3")] or [Rawg.getGames(platforms: "pc")]
   /// return an empty list if the page does not exist
   static Future<List<Game>> getGames(
-      {int page = 1, Ordering? order, String? query}) async {
-    return RawgUtils.games(page, order, query);
+      {int page = 1,
+      Ordering? order,
+      String? query,
+      String? platforms,
+      String? genres}) async {
+    return RawgUtils.games(page, order, query, platforms, genres);
   }
 
   /// Get a list of [String] (URI of image)

@@ -7,16 +7,23 @@ import 'rawg_utils.dart';
 import 'utils.dart';
 
 /// get the [List<Game>] from api
-Future<List<Game>> loadGame(int page, Ordering? ordering, String? query) async {
+Future<List<Game>> loadGame(int page, Ordering? ordering, String? query,
+    String? platforms, String? genres) async {
+  Map<String, dynamic> queryParameters = {
+    "key": Rawg.key,
+    "page_size": 100,
+    "page": page,
+    "search": query?.toLowerCase(),
+    "orderig": Utils.orderingFormat(ordering),
+    "genres": genres,
+    "platforms": platforms,
+  };
+
+  queryParameters.removeWhere((key, value) => value == null);
+
   Response response = await RawgUtils.dio.get(
     '${RawgUtils.baseUrl}/games',
-    queryParameters: {
-      "key": Rawg.key,
-      "page_size": 100,
-      "page": page,
-      "search": query?.toLowerCase(),
-      "orderig": Utils.orderingFormat(ordering),
-    },
+    queryParameters: queryParameters,
     options: Options(
       validateStatus: (status) => true,
     ),
