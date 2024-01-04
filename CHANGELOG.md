@@ -1,3 +1,6 @@
+### 1.1.1
+- fixed library name
+
 ### 1.1.0
 - added getScreenshot()
 - added platforms and genre in getGames()
