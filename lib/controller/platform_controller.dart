@@ -4,6 +4,7 @@ import '../models/platform.dart';
 import 'rawg.dart';
 import 'rawg_utils.dart';
 
+/// get the [List<Platform>] from api
 Future<List<Platform>> loadPlatform() async {
   Response response = await RawgUtils.dio.get(
     '${RawgUtils.baseUrl}/platforms',

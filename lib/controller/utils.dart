@@ -1,6 +1,8 @@
 import '../models/ordering.dart';
 
+/// Utils class with internal methods
 class Utils {
+  /// get the order string from [Ordering] enum
   static String orderingFormat(Ordering? order) {
     switch (order) {
       case Ordering.added:

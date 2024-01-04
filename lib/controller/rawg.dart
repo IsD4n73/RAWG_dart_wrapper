@@ -9,6 +9,7 @@ class Rawg {
   /// Api key for authentication
   static String? key;
 
+  /// Constructor to inizialize the API KEY
   Rawg({required String apiKey}) {
     key = apiKey;
   }

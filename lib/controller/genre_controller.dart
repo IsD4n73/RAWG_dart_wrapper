@@ -4,6 +4,7 @@ import '../models/genre.dart';
 import 'rawg.dart';
 import 'rawg_utils.dart';
 
+/// get the [List<Genre>] from api
 Future<List<Genre>> loadGenre() async {
   Response response = await RawgUtils.dio.get(
     '${RawgUtils.baseUrl}/genres',

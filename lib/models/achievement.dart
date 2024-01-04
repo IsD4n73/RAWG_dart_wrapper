@@ -1,4 +1,5 @@
 class Achievement {
+  /// Constructor of Achievement
   Achievement({
     required this.id,
     required this.name,
@@ -7,12 +8,18 @@ class Achievement {
     required this.percent,
   });
 
+  /// ID of Achievement 
   final int id;
+  /// name of Achievement
   final String name;
+  /// description of Achievement
   final String description;
+  /// image of Achievement
   final String image;
+  /// percent of Achievement
   final String percent;
 
+  /// get the model from the json
   factory Achievement.fromJson(Map<String, dynamic> json) {
     return Achievement(
       id: json["id"] ?? 0,
@@ -23,6 +30,7 @@ class Achievement {
     );
   }
 
+  /// get the json from the model
   Map<String, dynamic> toJson() => {
         "id": id,
         "name": name,

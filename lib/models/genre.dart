@@ -1,4 +1,5 @@
 class Genre {
+  /// Constructor of Genre
   Genre({
     required this.id,
     required this.name,
@@ -7,12 +8,18 @@ class Genre {
     required this.imageBackground,
   });
 
+  /// ID of Genre
   final int id;
+  /// name of Genre
   final String name;
+  /// slug ID of Genre
   final String slug;
+  /// nuber of [Game] with the Genre
   final int gamesCount;
+  /// Image of Genre
   final String imageBackground;
 
+  /// get the model from the json
   factory Genre.fromJson(Map<String, dynamic> json) {
     return Genre(
       id: json["id"] ?? 0,
@@ -23,6 +30,7 @@ class Genre {
     );
   }
 
+  /// get the json from the model
   Map<String, dynamic> toJson() => {
         "id": id,
         "name": name,

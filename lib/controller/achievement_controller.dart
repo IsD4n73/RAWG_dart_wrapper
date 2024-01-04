@@ -5,6 +5,7 @@ import '../models/errors.dart';
 import 'rawg.dart';
 import 'rawg_utils.dart';
 
+/// get the [List<Achievement>] from api
 Future<List<Achievement>> loadGameTrofy(int id) async {
   Response response = await RawgUtils.dio.get(
     '${RawgUtils.baseUrl}/games/$id/achievements',

@@ -1,4 +1,5 @@
 class Game {
+  /// Constructor of Game
   Game({
     required this.id,
     required this.slug,
@@ -13,18 +14,30 @@ class Game {
     required this.alternativeNames,
   });
 
+  /// ID of Game
   final int id;
+  /// slug ID of Game 
   final String slug;
+  /// name of Game
   final String name;
+  /// originale name of Game
   final String nameOriginal;
+  /// description of Game (only with details call)
   final String description;
+  /// released date of Game
   final String released;
+  /// is TBA
   final bool tba;
+  /// bg image of Game
   final String backgroundImage;
+  /// website of Game (only with details call)
   final String website;
+  /// achievements count of Game (only with details call)
   final int achievementsCount;
+  /// alternative name of Game (only with details call)
   final List<String> alternativeNames;
 
+  /// get the model from the json
   factory Game.fromJson(Map<String, dynamic> json) {
     return Game(
       id: json["id"] ?? 0,
@@ -43,6 +56,7 @@ class Game {
     );
   }
 
+  /// get the json from the model
   Map<String, dynamic> toJson() => {
         "id": id,
         "slug": slug,

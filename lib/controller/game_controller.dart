@@ -6,6 +6,7 @@ import 'rawg.dart';
 import 'rawg_utils.dart';
 import 'utils.dart';
 
+/// get the [List<Game>] from api
 Future<List<Game>> loadGame(int page, Ordering? ordering, String? query) async {
   Response response = await RawgUtils.dio.get(
     '${RawgUtils.baseUrl}/games',
@@ -46,6 +47,7 @@ Future<List<Game>> loadGame(int page, Ordering? ordering, String? query) async {
   return results;
 }
 
+/// get the [Game] from api with details
 Future<Game> loadDetail(int id) async {
   Response response = await RawgUtils.dio.get(
     '${RawgUtils.baseUrl}/games/$id',
