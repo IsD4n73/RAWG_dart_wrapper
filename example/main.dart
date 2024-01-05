@@ -15,6 +15,9 @@ Future<dynamic> main() async {
   // get the screenshot
   List<String> screen = await Rawg.getScreenshot(gameID: games2.first.id);
 
+  // get the trailer
+  List<String> trailer = await Rawg.getTrailer(gameID: games2.first.id);
+
   // search for games
   games2 = await Rawg.getGames(query: "Call of duty");
 
@@ -33,10 +36,17 @@ Future<dynamic> main() async {
 
   achievement = await Rawg.getAchievements(id: games.first.id);
 
+
+  List<Publisher> publish = await Rawg.getPublisher();
+
+
+  
   print(games);
   print(detail);
+  print(trailer);
   print(screen);
   print(platforms);
   print(genres);
   print(achievement);
+  print(publish);
 }
