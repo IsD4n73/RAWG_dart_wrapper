@@ -65,8 +65,13 @@ List<Achievement> achievement = await Ragw.getAchievements(id: game.id, page: 3)
 List<Platform> platforms = await Ragw.getPlatforms();
 ```
 
+- publisher
+```dart
+// get the publisher
+List<Publisher> publisher = await Ragw.getPublisher();
+```
+
 
 ### TODO
-- Publisher wrapper
 - Store wrapper
 - Get links to the stores that sell the game
