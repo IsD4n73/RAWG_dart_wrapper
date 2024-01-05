@@ -119,3 +119,40 @@ Future<List<String>> loadScreenshot(int id) async {
   });
   return results;
 }
+
+/// get the trailers for the game
+Future<List<String>> loadTrailer(int id) async {
+  Response response = await RawgUtils.dio.get(
+    '${RawgUtils.baseUrl}/games/$id/movies',
+    queryParameters: {
+      "key": Rawg.key,
+    },
+    options: Options(
+      validateStatus: (status) => true,
+    ),
+  );
+
+  if (response.statusCode! != 200) {
+    throw RawgException(
+      "Request not in 200 OK",
+      response.statusCode ?? -1,
+    );
+  }
+
+  if (response.data["error"] != null || response.data["details"] != null) {
+    throw RawgException(
+      response.data["error"] ?? response.data["details"],
+      response.statusCode ?? -1,
+    );
+  }
+
+  List<String> results = [];
+  if (response.data['results'] == null) {
+    return results;
+  }
+
+  response.data['results'].forEach((v) {
+    results.add(v["data"]["max");
+  });
+  return results;
+}
