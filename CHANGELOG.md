@@ -1,3 +1,6 @@
+### 1.2.0
+- added getTrailers() 
+
 ### 1.1.1
 - fixed library name
 
