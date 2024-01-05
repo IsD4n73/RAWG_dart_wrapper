@@ -36,10 +36,11 @@ Future<dynamic> main() async {
 
   achievement = await Rawg.getAchievements(id: games.first.id);
 
-
+  /// get the publisher
   List<Publisher> publish = await Rawg.getPublisher();
 
-
+  /// get the store
+  List<Store> store = await Rawg.getStore()
   
   print(games);
   print(detail);
@@ -49,4 +50,5 @@ Future<dynamic> main() async {
   print(genres);
   print(achievement);
   print(publish);
+  print(store);
 }
