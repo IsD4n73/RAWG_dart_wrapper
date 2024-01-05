@@ -34,6 +34,12 @@ class Rawg {
     return RawgUtils.screen(gameID);
   }
 
+  /// Get a list of [String] (URI of video)
+  /// params: ID of the game
+  static Future<List<String>> getTrailers({required int gameID}) async {
+    return RawgUtils.trailer(gameID);
+  }
+
   /// Get a [Game] by ID with more details (achievement count, alias names, original name, website)
   static Future<Game> getGameDetails({required int id}) async {
     return RawgUtils.detail(id);
