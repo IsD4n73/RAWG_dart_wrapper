@@ -70,8 +70,12 @@ List<Platform> platforms = await Ragw.getPlatforms();
 // get the publisher
 List<Publisher> publisher = await Ragw.getPublisher();
 ```
+- store
+```dart
+// get the store
+List<Store> publisher = await Ragw.getStore();
+``` 
 
 
 ### TODO
-- Store wrapper
 - Get links to the stores that sell the game
