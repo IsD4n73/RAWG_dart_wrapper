@@ -69,5 +69,10 @@ class Rawg {
     return RawgUtils.publisher(page);
   }
 
+  /// Get a list of [Store]
+  static Future<List<Store>> getStore({int page = 1}) async {
+    return RawgUtils.store(page);
+  }
+
 
 }
