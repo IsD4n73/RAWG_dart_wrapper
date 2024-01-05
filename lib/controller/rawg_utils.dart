@@ -34,6 +34,11 @@ class RawgUtils {
     return await loadScreenshot(id);
   }
 
+  /// check for game trailer error
+  static Future<List<String>> trailer(int id) async {
+    return await loadTrailer(id);
+  }
+
   /// check for genre error
   static Future<List<Genre>> genres() async {
     return await loadGenre();
