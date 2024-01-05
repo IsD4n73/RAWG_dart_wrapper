@@ -5,8 +5,10 @@ import '../models/game.dart';
 import '../models/genre.dart';
 import '../models/ordering.dart';
 import '../models/platform.dart';
+import '../models/publisher.dart';
 import 'achievement_controller.dart';
 import 'game_controller.dart';
+import 'publisher_controller.dart';
 import 'genre_controller.dart';
 import 'platform_controller.dart';
 
@@ -53,4 +55,11 @@ class RawgUtils {
   static Future<List<Platform>> platforms() async {
     return await loadPlatform();
   }
+
+  /// check for platform error
+  static Future<List<Publisher>> publisher(int page) async {
+    return await loadPublisher(page);
+  }
+
+  
 }
