@@ -3,6 +3,8 @@ import '../models/game.dart';
 import '../models/genre.dart';
 import '../models/ordering.dart';
 import '../models/platform.dart';
+import '../models/publisher.dart';
+import '../models/store.dart';
 import 'rawg_utils.dart';
 
 class Rawg {
@@ -61,4 +63,11 @@ class Rawg {
   static Future<List<Platform>> getPlatforms() async {
     return RawgUtils.platforms();
   }
+
+  /// Get a list of [Publisher]
+  static Future<List<Publisher>> getPublisher({int page = 1}) async {
+    return RawgUtils.publisher(page);
+  }
+
+
 }
