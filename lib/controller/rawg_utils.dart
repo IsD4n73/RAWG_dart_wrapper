@@ -63,5 +63,10 @@ class RawgUtils {
     return await loadPublisher(page);
   }
 
+  /// check for store error
+  static Future<List<Store>> store(int page) async {
+    return await loadStore(page);
+  }
+
   
 }
