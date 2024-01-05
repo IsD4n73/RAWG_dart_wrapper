@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 
 import '../models/achievement.dart';
 import '../models/game.dart';
+import '../models/store.dart';
 import '../models/genre.dart';
 import '../models/ordering.dart';
 import '../models/platform.dart';
@@ -11,6 +12,7 @@ import 'game_controller.dart';
 import 'publisher_controller.dart';
 import 'genre_controller.dart';
 import 'platform_controller.dart';
+import 'store_controller.dart';
 
 /// Class for check for errors
 class RawgUtils {
