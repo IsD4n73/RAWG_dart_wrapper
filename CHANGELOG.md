@@ -1,5 +1,7 @@
 ### 1.2.0
-- added getTrailers() 
+- added getTrailers()
+- added Store
+- added Publisher
 
 ### 1.1.1
 - fixed library name
