@@ -38,6 +38,9 @@ Game detail = await Rawg.getGameDetails(id: 5);
 
 // get the screenshot
 List<String> screen = await Rawg.getScreenshot(gameID: 5);
+
+// get the trailer
+List<String> trailer = await Rawg.getTrailers(gameID: 5);
 ```
 
 - genres
@@ -67,5 +70,3 @@ List<Platform> platforms = await Ragw.getPlatforms();
 - Publisher wrapper
 - Store wrapper
 - Get links to the stores that sell the game
-- Get a list of game trailers
-
