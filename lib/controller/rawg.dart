@@ -73,4 +73,9 @@ class Rawg {
   static Future<List<Store>> getStore({int page = 1}) async {
     return RawgUtils.store(page);
   }
+
+  /// Get a list of [String] (uri of store thath sell the game)
+  static Future<List<String>> getStoreForGame({required int gameID}) async {
+    return RawgUtils.storeGame(gameID);
+  }
 }

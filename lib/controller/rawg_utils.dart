@@ -67,4 +67,9 @@ class RawgUtils {
   static Future<List<Store>> store(int page) async {
     return await loadStore(page);
   }
+
+  /// check for store error
+  static Future<List<String>> storeGame(int id) async {
+    return await loadStoreGame(id);
+  }
 }

@@ -74,6 +74,9 @@ List<Publisher> publisher = await Ragw.getPublisher();
 ```dart
 // get the store
 List<Store> publisher = await Ragw.getStore();
+
+// get the store for game
+List<String> gameStore = await Rawg.getStoreForGame(gameID: 5);
 ``` 
 
 

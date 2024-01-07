@@ -1,3 +1,7 @@
+### 1.3.0
+- added getStoreForGame()
+- code quality
+
 ### 1.2.0
 - added getTrailers()
 - added Store

@@ -42,6 +42,9 @@ Future<dynamic> main() async {
   /// get the store
   List<Store> store = await Rawg.getStore();
 
+  // get the store for game
+  List<String> gameStore = await Rawg.getStoreForGame(gameID: games2.first.id);
+
   print(games);
   print(detail);
   print(trailer);
@@ -51,4 +54,5 @@ Future<dynamic> main() async {
   print(achievement);
   print(publish);
   print(store);
+  print(gameStore);
 }

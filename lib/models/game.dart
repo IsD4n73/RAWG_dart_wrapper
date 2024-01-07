@@ -62,6 +62,7 @@ class Game {
   /// alternative name of Game (only with details call)
   final List<String> alternativeNames;
 
+  /// list of the [Platform] where the game is avaliable
   final List<Platform> platforms;
 
   /// get the model from the json
@@ -98,6 +99,8 @@ class Game {
             ),
     );
   }
+
+  
 
   @override
   String toString() {
