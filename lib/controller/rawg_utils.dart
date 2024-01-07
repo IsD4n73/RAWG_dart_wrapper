@@ -67,6 +67,4 @@ class RawgUtils {
   static Future<List<Store>> store(int page) async {
     return await loadStore(page);
   }
-
-  
 }

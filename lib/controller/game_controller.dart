@@ -152,7 +152,7 @@ Future<List<String>> loadTrailer(int id) async {
   }
 
   response.data['results'].forEach((v) {
-    results.add(v["data"]["max");
+    results.add(v["data"]["max"]);
   });
   return results;
 }

@@ -16,7 +16,7 @@ Future<dynamic> main() async {
   List<String> screen = await Rawg.getScreenshot(gameID: games2.first.id);
 
   // get the trailer
-  List<String> trailer = await Rawg.getTrailer(gameID: games2.first.id);
+  List<String> trailer = await Rawg.getTrailers(gameID: games2.first.id);
 
   // search for games
   games2 = await Rawg.getGames(query: "Call of duty");
@@ -40,8 +40,8 @@ Future<dynamic> main() async {
   List<Publisher> publish = await Rawg.getPublisher();
 
   /// get the store
-  List<Store> store = await Rawg.getStore()
-  
+  List<Store> store = await Rawg.getStore();
+
   print(games);
   print(detail);
   print(trailer);

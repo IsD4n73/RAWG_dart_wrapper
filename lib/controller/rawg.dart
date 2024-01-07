@@ -73,6 +73,4 @@ class Rawg {
   static Future<List<Store>> getStore({int page = 1}) async {
     return RawgUtils.store(page);
   }
-
-
 }
