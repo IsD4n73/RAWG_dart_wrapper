@@ -1,3 +1,6 @@
+### 1.3.1
+- code quality
+
 ### 1.3.0
 - added getStoreForGame()
 - code quality

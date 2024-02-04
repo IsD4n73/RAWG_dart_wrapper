@@ -100,8 +100,6 @@ class Game {
     );
   }
 
-  
-
   @override
   String toString() {
     return 'Game(id: $id, slug: $slug, name: $name, nameOriginal: $nameOriginal, description: $description, released: $released, tba: $tba, backgroundImage: $backgroundImage, website: $website, achievementsCount: $achievementsCount, playtime: $playtime, rating: $rating, metacriticRating: $metacriticRating, alternativeNames: $alternativeNames, platforms: $platforms)';
